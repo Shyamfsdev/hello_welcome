@@ -1,0 +1,358 @@
+/* html, body {
+    overflow-x: hidden;
+  }
+
+
+  .scroller {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 400px; 
+  }
+  
+  .scroller__inner {
+    display: flex;
+    animation: scroll 10s linear infinite;
+    position: relative;
+  }
+  
+  .milestone {
+    flex-shrink: 0;
+    width: 400px;
+    text-align: center;
+    padding: 10px;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    margin: 10px;
+    position: relative;
+  }
+  
+  .milestone-top {
+    transform: translateY(-20%);
+  }
+  
+  .milestone-bottom {
+    transform: translateY(100%);
+  }
+  
+  .line-container {
+    position: absolute;
+    top: 50%; 
+    left: 0;
+    transform: translateY(-70%); 
+    width: 100%;
+    height: 1.5px; 
+    background-color: #ddd;;
+    z-index: 1;
+  }
+  
+  .dot-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    background-color: yellow;
+    border-radius: 50%;
+  }
+  
+  .content {
+    margin-top: 20px;
+  }
+  
+  .year {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .description {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+   */
+
+/* 
+   html, body {
+    overflow-x: hidden;
+  }
+  
+  .scroller {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 500px; 
+  }
+
+  .scroller[data-animated="true"] {
+    overflow: hidden;
+    -webkit-mask: linear-gradient(
+      90deg,
+      transparent,
+      white 20%,
+      white 80%,
+      transparent
+    );
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  }
+  
+  .scroller__inner {
+    display: flex;
+    animation: scroll 10s linear infinite;
+    position: relative;
+  }
+  
+  .milestone {
+    flex-shrink: 0;
+    width: 400px;
+    text-align: center;
+    position: relative;
+  }
+
+  .description{
+    padding: 10px;
+    background: #fff;
+    border-radius: 13px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    margin: 10px;
+    position: relative;
+  }
+  
+  .line-container {
+    position: absolute;
+    top: 50%; 
+    left: 0;
+    width: 100%;
+    height: 1.5px; 
+    background-color: #ddd;
+    z-index: 1;
+  }
+  
+  .dot-container {
+    position: absolute;
+    left: -15px; 
+    top: 50%; 
+    
+    z-index: 2;
+  }
+  
+  .dot-top {
+    width: 13px;
+    height: 13px;
+    background-color: #FACC15;
+    border-radius: 50%;
+    transform: translateY(129px);
+    position: absolute;
+    left: 196px; 
+  }
+
+  .dot-bottom {
+    width: 13px;
+    height: 13px;
+    background-color: #FACC15;
+    border-radius: 50%;
+    transform: translateY(-141px);
+    position: absolute;
+    left: 210px; 
+  }
+
+
+  .milestone-top {
+    transform: translateY(6%);
+  }
+  
+  .milestone-bottom {
+    transform: translateY(137%);
+  }
+  
+  
+  .content {
+    margin-top: 10px;
+  }
+  
+  .year {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .description {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  } */
+
+
+
+  body, html {
+    overflow-x: hidden;
+  }
+  
+  .scroller {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 500px; 
+  }
+  
+  .scroller[data-animated="true"] {
+    overflow: hidden;
+    -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  }
+  
+  .scroller__inner {
+    display: flex;
+    animation: scroll 10s linear infinite;
+    position: relative;
+  }
+
+  .scroller__inner:hover{
+    animation-play-state: paused;
+  }
+  
+  .scroller__inner.paused {
+    animation-play-state: paused; 
+  }
+  
+  .milestone {
+    flex-shrink: 0;
+    width: 400px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .description-top ,.description-bottom ,.description-mobile{
+    padding: 10px;
+    background: #fff;
+    border-radius: 13px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    margin: 10px;
+    position: relative;
+  }
+
+
+  .description-top{
+    position: relative;
+    top:35px;
+  }
+
+  .description-bottom{
+    position: relative;
+    bottom:-30px;
+  }
+  
+  .line-container {
+    position: absolute;
+    top: 50%; 
+    left: 0;
+    width: 100%;
+    height: 1.5px; 
+    background-color: #ddd;
+    z-index: 1;
+  }
+  
+  .dot-container {
+    position: absolute;
+    left: -15px; 
+    top: 50%; 
+    z-index: 2;
+  }
+  
+  .dot-top {
+    width: 13px;
+    height: 13px;
+    background-color: #FACC15;
+    border-radius: 50%;
+    transform: translateY(134px);
+    position: absolute;
+    left: 208px; 
+  }
+  
+  .dot-bottom {
+    width: 13px;
+    height: 13px;
+    background-color: #FACC15;
+    border-radius: 50%;
+    transform: translateY(-123px);
+    position: absolute;
+    left: 210px; 
+  }
+  
+  .milestone-top {
+    transform: translateY(6%);
+  }
+  
+  .milestone-bottom {
+    transform: translateY(137%);
+  }
+  
+  .content {
+    margin-top: 10px;
+  }
+  
+  .year-top , .year-bottom,.year-mobile {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+
+  .year-top{
+    position:relative;
+    top:108px;
+    right:-4px;
+  }
+  
+
+  .year-bottom{
+    position:absolute;
+    top:-100px;
+    right:171px;
+  }
+  
+  .description-top .description-bottom {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+
+  .tooltip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    white-space: nowrap;
+  }
+  
+  .tooltip-arrow {
+    position: absolute;
+  }
+  
